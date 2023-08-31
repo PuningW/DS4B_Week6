@@ -17,5 +17,17 @@ output:
 # Bonus section
 
 ## Loading the data
+```{r}
+library(tidyverse)
+
+data <- read_csv("raw_data/data.csv")
+```
 
 ## An interesting plot
+```{r}
+library(ggplot2)
+
+ggplot(data, aes(x = weight, y = TempC)) +
+  geom_point(aes(color = Sex))
+```
+
